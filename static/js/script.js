@@ -5,10 +5,11 @@ var monthbuckets = {};
 var daybuckets = {};
 var curState = {};
 var curGallery = -1;
+var baseUrl = '';
 
 $(function() {
     var sort = '\'{"timestamp":-1}\'';
-    $.getJSON('/query/getPhoto', {'sort':sort}, processResults);
+    $.getJSON(baseUrl + '/query/getPhoto', {'sort':sort}, processResults);
     $('#page_wrapper').delegate('ul', 'click', moveIn);
     $('.back-button').click(moveOut);
     Galleria.loadTheme('js/themes/classic/galleria.classic.min.js');
@@ -50,7 +51,7 @@ $(function() {
     if (window.location.hash.substr(0,5) == "#view") {
         var url = "/Me/photos/id/" + window.location.hash.substr(6);
         $.ajax({
-            "url":url,
+            "url":baseUrl + url,
             type:"GET",
             dataType:"json",
             success:function(data) {
