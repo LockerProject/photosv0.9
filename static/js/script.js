@@ -197,10 +197,12 @@ var drawGallery = function(bucket) {
     var data = [];
     for (var i = 0; i < bucket.length; i++) {
         var newObj = {};
+        var service = bucket[i].sources[0].service;
+        service = service.charAt(0).toUpperCase() + service.slice(1);
         newObj.image = bucket[i].url;
         newObj.thumb = bucket[i].thumbUrl || bucket[i].thumbnail || bucket[i].url;
         newObj.title = bucket[i].title;
-        newObj.description = bucket[i].date;
+        newObj.description = bucket[i].date + " - from " + service;
         newObj.link = bucket[i].sourceLink;
         data.push(newObj);
     }
