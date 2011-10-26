@@ -5,7 +5,7 @@
     "status":"stable",
     "static":"true",
     "handle":"photosv09",
-    "uses":["facebook", "twitter", "foursquare", "flickr"],
+    "uses":["facebook", "twitter", "foursquare", "flickr", "instagram"],
     "autoInstall":true,
     "author":"Singly",
     "viewer": "photos"
