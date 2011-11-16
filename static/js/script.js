@@ -37,7 +37,7 @@ $(function() {
     }
     if (window.location.hash.substr(0,7) == "#search") {
         var baseURL = '/Me/search/query';
-        var type = 'photo/full*';
+        var type = 'photo*';
 
         $.getJSON(baseURL, {q: window.location.hash.substr(8) + "*", type: type, limit: 20}, function(results) {
             var photos = [];
