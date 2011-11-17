@@ -9,7 +9,8 @@ var baseUrl = '';
 
 $(function() {
     var sort = '\'{"timestamp":-1}\'';
-    $.getJSON(baseUrl + '/query/getPhoto', {'sort':sort}, processResults);
+    var fields = '[sources.service:1, id:1,sourceLink:1,thumbnail:1,timestamp:1,url:1,title:1]';
+    $.getJSON(baseUrl + '/query/getPhoto?fields=' + fields, {'sort':sort, limit:10000}, processResults);
     $('#page_wrapper').delegate('ul', 'click', moveIn);
     $('.back-button').click(moveOut);
     Galleria.loadTheme('js/themes/classic/galleria.classic.min.js');
