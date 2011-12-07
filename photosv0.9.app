@@ -7,6 +7,7 @@
     "handle":"photosv09",
     "uses":["facebook", "twitter", "foursquare", "flickr", "instagram"],
     "autoInstall":true,
-    "author":"Singly",
+    "author":"Singly, Inc.",
+    "github":"https://github.com/LockerProject/photosv0.9",
     "viewer": "photos"
 }
